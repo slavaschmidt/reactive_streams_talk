@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Heartbeat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <style type="text/css">
+        html, body, div {
+            background-color: #0A2939;
+            opacity: 1;
+            -webkit-backface-visibility: hidden;
+        }
+        /*<![CDATA[*/
+        .container, .thread {
+            float: left;
+        }
+        .thread {
+            margin: 20px;
+            width: 500px;
+        }
+        .container {
+            width: 100%;
+            fill: #073042;
+        }
+        svg {
+            clear: right;
+            display: block;
+        }
+        .top_cpu, .top_swap {
+            stroke: #B5C4CB;
+            stroke-width: 1;
+            stroke-linecap: round;
+        }
+        .cpu, .swap {
+          fill: #B5C4CB; /*steelblue;*/
+          fill-opacity: 0.3;
+        }
+        .RUNNABLE {
+            fill: #9BF898;
+        }
+        .TIMED_WAITING {
+            fill: #c85a6a;
+        }
+        .waiting {
+            fill: #c85a6a;
+        }
+        .blocked {
+            fill: #c85a6a;
+        }
+        .NONE {
+            fill: transparent;
+        }
+        /* firebrick, red, */
+        /*]]>*/
+    </style>
+</head>
+<body>
+<div class="thread" id="RS-Alice">
+    <div class="container cpu">
+    </div>
+    <div class="container state">
+    </div>
+    <div class="container swap">
+    </div>
+
+</div>
+<div class="thread" id="RS-Borice">
+    <div class="container cpu">
+    </div>
+    <div class="container state">
+    </div>
+    <div class="container swap">
+    </div>
+</div>
+
+<!-- /container -->
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/d3.v3.js"></script>
+<script type="text/javascript" src="assets/js/charts.js"></script>
+</body>
+</html>
